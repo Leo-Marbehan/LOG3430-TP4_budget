@@ -1,5 +1,12 @@
 name: Python package
-on: [push]
+on:   
+  workflow_dispatch:
+    inputs:
+      myCommit:
+        description: 'c1a4be04b972b6c17db242fc37752ad517c29402'
+        required: true
+        default: 'undefined'
+        type: string
 jobs:
   build:
     runs-on: ubuntu-latest
