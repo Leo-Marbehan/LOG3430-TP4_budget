@@ -6,9 +6,6 @@ if __name__ == '__main__':
 
     os.system(f'git bisect start {known_bad_commit} {known_good_commit}')
 
-    python_39_path = 'C:\\Users\\marbe\\AppData\\Local\\Programs\\Python\\Python39-32\\python.exe'
-    target = '.\\manage.py'
-
-    command = f'{python_39_path} {target} test'
+    command = f'python manage.py test'
 
     os.system(f'git bisect run {command}')
